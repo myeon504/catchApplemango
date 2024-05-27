@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🥭 Catch Applemango</title>
+    <script>
+        (function(d) {
+          var config = {
+            kitId: 'rqd5btk',
+            scriptTimeout: 3000,
+            async: true
+          },
+          h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        })(document);
+      </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="instructionContainer">
+        <div class="title-container">
+        <img src="title.png">
+        </div>
+        <div class="notice">
+        <p id="howto">HOW TO PLAY</p>
+        <p>Click on the popping Applemangoes<br>as much as you can!</p>
+        </div>
+        <button id="startButton">START</button>
+    </div>
+
+    <div id="gameContainer">
+        <div id="scoreBoard">
+            <p>SCORE</p>
+            <p id="scoreNumber">0</p>
+        </div>
+        <div id="timer">
+            <p>TIME</p>
+            <p id="timerNumber">60s</p></div>
+            //
+        <div id="copyright">Copyrightⓒ2024 StudioAMJ All rights reserved.</div>
+        //
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
