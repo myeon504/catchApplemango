@@ -9,7 +9,7 @@ body {
     -webkit-user-select:none;
     -moz-user-select:none;
     -ms-user-select:none;
-    user-select:none
+    user-select:none;
 }
 
 #gameContainer {
@@ -31,29 +31,29 @@ body {
     font-style: normal;
 }
 
-#scoreBoard{
+#scoreBoard {
     text-align: center;
 }
 
-#scoreBoard p{
+#scoreBoard p {
     letter-spacing: 0.2em;
     margin-top: 0;
     margin-bottom: 0.25em;
 }
 
-#scoreNumber{
+#scoreNumber {
     font-weight: bold;
     background: -webkit-linear-gradient(-90deg, rgba(255,43,62,1) 0%, rgba(255,204,33,1) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-#timerNumber{
+#timerNumber {
     font-weight: bold;
     background: -webkit-linear-gradient(-90deg, rgba(252,255,0,1) 25%, rgba(119,255,0,1) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    }
+}
 
 #timer {
     left: auto;
@@ -61,7 +61,7 @@ body {
     text-align: center;
 }
 
-#timer p{
+#timer p {
     letter-spacing: 0.2em;
     margin-top: 0;
     margin-bottom: 0.25em;
@@ -72,9 +72,10 @@ body {
     bottom: 30px;
     font-size: 1em;
     color: gray;
+    z-index: 4;
 }
 
-#instructionContainer{
+#instructionContainer {
     position: absolute;
     transform: translate(-50%, -50%);
     top: 45%;
@@ -88,11 +89,11 @@ body {
     height: auto;
 }
 
-.notice{
+.notice {
     margin-bottom: 2em;
 }
 
-.notice p{
+.notice p {
     font-size: 1.2em;
     margin-top: 0.8em;
     margin-bottom: 0;
@@ -101,12 +102,27 @@ body {
     font-style: normal;
 }
 
-#howto{
+#howto {
     -webkit-text-stroke: 1px white;
     letter-spacing: 0.2em;
 }
 
-#startButton{
+#nameinput {
+    width: calc(60% - 1em);
+    font-size: 1.2em;
+    font-family: "dotgothic16", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #303030;
+    border-width: 0;
+    color: rgb(252, 255, 0);
+    margin-bottom: 1.8em;
+    height: 2.1em;
+    padding-left: 1em;
+}
+
+#startButton {
+    border-width: 0;
     width: 60%;
     height: 2.2em;
     font-size: 1.2em;
@@ -115,30 +131,31 @@ body {
     font-style: normal;
     -webkit-text-stroke: 1px black;
     letter-spacing: 0.2em;
-    background: linear-gradient(180deg, rgba(252,255,0,1) 25%, rgba(119,255,0,1) 100%);;
+    background: linear-gradient(180deg, rgba(252,255,0,1) 25%, rgba(119,255,0,1) 100%);
 }
 
-.title-container{
+.title-container {
     width: 100%;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.title-container img{
+.title-container img {
     width: 100%;
 }
 
 .fruit {
     position: absolute;
-    width: 9vw;
-    height: 9vw;
+    width: 10vw;
+    height: 10vw;
     z-index: 2;
-    min-width: 120px;
-    min-height: 120px;
-    max-width: 200px;
-    max-height: 200px;
-    background-size: contain;
+    min-width: 150px;
+    min-height: 150px;
+    max-width: 240px;
+    max-height: 240px;
+    background-size: 90%;
+    background-position: center;
     background-repeat: no-repeat;
     animation: jump 2.5s ease-in-out forwards;
     cursor: pointer;
@@ -170,3 +187,74 @@ body {
         transform: translateX(var(--direction-180px));
     }
 }
+
+#endingDark {
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000;
+    opacity: 0.5;
+    display: none;
+    z-index: 3;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+#endingPopup {
+    font-family: "dotgothic16", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    z-index: 4;
+    position: absolute;
+    width: 40vw;
+    text-align: center;
+    background-color: #000000;
+    color: #ffffff;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    display: none;
+}
+
+#endingScore {
+    font-size: 1.5em;
+    -webkit-text-stroke: 1px white;
+}
+
+#rankingTable {
+    width: 100%;
+    margin-top: 10px;
+}
+
+#rankingStand{
+    width: 20%;
+}
+
+#rankingName{
+    width: 40%;
+}
+
+#rankingTable th, #rankingTable td {
+    text-align: center;
+    padding: 5px;
+}
+
+#rankingTable th{
+    color: #ffcc00;
+}
+
+#retry {
+    width: 60%;
+    margin-top: 2em;
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-family: "dotgothic16", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
